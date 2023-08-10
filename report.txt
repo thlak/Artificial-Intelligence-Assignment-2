@@ -1,0 +1,37 @@
+50d:
+4 layer model
+128, 64, 64, 32, 2
+lr = 0.004
+batch = 64
+epochs 15
+overfits (model1_f1.png)
+---------------
+same model but batch == 32
+a bit less overfit, 
+learning score stays at .75
+but surely less overfit (model2_f1.png)
+---------------
+
+Note: Noticed that in general 64 batch number is not a good idea, it results in overfit model
+One the other hand 16 was not efficient either. Found it to be too small to have a sufficient
+training score. 
+
+3 layer model
+128, 64, 64, 2
+more or less same training scores, 
+but less overfit (model_4_f1.png)
+
+4 layer model 
+128, 64, 64, 32, 2
+learning rate 0.004
+4 layer producuces less overfit but has weird effect on validation score as it results in wird behaviour (model_5_f1.png)
+
+--------------------
+learning rate 0.01
+batch 50
+4 layers 128, 64, 32, 32 (model_6_f1.png)
+--------------------
+learnign rate 0.01
+3 layers 128, 64, 32 (model_7_f1_png)
+batch 50
+overfit
